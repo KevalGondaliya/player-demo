@@ -1,0 +1,189 @@
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  @media (max-width: 425px) {
+    padding: 0;
+  }
+}
+
+.audio-player {
+  background-color: black !important;
+  position: relative;
+  @media (max-width: 425px) {
+    font-size: medium;
+    .rhap_controls-section {
+      margin: 0;
+    }
+  }
+  .rhap_controls-section {
+    > div:nth-child(2) {
+      display: none;
+    }
+  }
+
+  .rhap_additional-controls {
+    margin-left: 65px;
+    display: flex;
+    align-items: center;
+    @media (max-width: 425px) {
+      margin-left: 40px;
+    }
+    .speed-control {
+      display: flex;
+      width: 120px;
+      align-items: center;
+      gap: 10px;
+      color: #cccbcc;
+      font-weight: 500;
+      font-size: larger;
+      @media (max-width: 425px) {
+        font-size: smaller;
+        gap: 5px;
+        width: 100px;
+      }
+      .speed-rate {
+        width: 45px;
+        @media (max-width: 425px) {
+          width: 32px;
+        }
+      }
+      svg {
+        border-radius: 5px;
+        fill: #cccbcc;
+      }
+
+      button {
+        border: 2px solid #cccbcc;
+        min-width: auto;
+        padding: 0;
+        @media (max-width: 425px) {
+          width: 20px;
+          height: 20px;
+          svg {
+            height: 15px;
+            width: 15px;
+          }
+        }
+        span {
+          margin: 0;
+        }
+      }
+    }
+    .rhap_main-controls {
+      margin: 0 10px;
+      @media (max-width: 425px) {
+        margin: 0 0 0 5px;
+      }
+      button {
+        margin: 0;
+      }
+    }
+    .rhap_volume-container {
+      margin-left: 10px;
+      @media (max-width: 425px) {
+        margin: 0;
+      }
+      &:hover {
+        .rhap_volume-bar-area {
+          opacity: 1;
+          transition: 0.5s ease-in-out;
+        }
+      }
+
+      .rhap_volume-bar-area {
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
+
+  .pushPlayBtn {
+    button {
+      min-width: auto;
+      padding: 0;
+      border: 0;
+      text-decoration: none;
+
+      svg {
+        fill: #c5c5c5;
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+
+  .duration {
+    margin-left: 10px;
+    width: 65px;
+    display: flex;
+    color: #c5c5c5;
+    justify-content: flex-end;
+  }
+  .playerIcon {
+    fill: #c5c5c5;
+    height: 100%;
+    width: 100%;
+  }
+
+  .rhap_progress-section {
+    .rhap_main-controls {
+      > button:nth-child(2) {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        height: 70px;
+        width: 70px;
+        @media (max-width: 425px) {
+          height: 50px;
+          width: 50px;
+          top: 25px;
+        }
+      }
+
+      .rhap_rewind-button {
+        display: none;
+      }
+
+      .rhap_forward-button {
+        display: none;
+      }
+    }
+  }
+
+  .rhap_controls-section {
+    .rhap_main-controls {
+      .rhap_play-pause-button {
+        display: none;
+      }
+    }
+  }
+
+  .rhap_volume-controls {
+    .rhap_time {
+      color: #c5c5c5 !important;
+    }
+  }
+
+  .separator {
+    color: #c5c5c5 !important;
+  }
+
+  .silderSecContent {
+    .MuiSlider-thumbColorPrimary {
+      background-color: gray !important;
+    }
+  }
+
+  .silderContent {
+    margin-left: 70px;
+    @media (max-width: 425px) {
+      margin-left: 45px;
+    }
+    .MuiSlider-thumbColorPrimary {
+      background-color: #cccccb !important;
+    }
+  }
+}
